@@ -1,6 +1,6 @@
-#!/usr/bin/pup
-# installng a flask package
-package { 'flask':
-  ensure   => '2.1.0',
-  provider => 'pip',
+#install a flask from pip3
+exec { 'install flask':
+  command =>  'pip3 install flask==2.1.0',
+  path    =>  '/usr/bin/',
+  unless  =>  'pip3 list | grep flask',
 }
