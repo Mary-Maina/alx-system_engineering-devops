@@ -11,8 +11,8 @@ file_line {'remove password auth':
   replace => 'true',
 }
 file_line {'Use a identity file':
+  ensure  => 'present',
   path    => '/etc/ssh/ssh_config',
   line    => 'IdentityFile ~/.ssh/config',
   match   => '^identityFile',
-  ensure  => 'present',
 }
