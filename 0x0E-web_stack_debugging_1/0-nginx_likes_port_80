@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#find out why nginx port 80 does not work
+
+apt-get update -y
+apt-get install -y nginx
+sudo service nginx enable
+sudo service nginx start
