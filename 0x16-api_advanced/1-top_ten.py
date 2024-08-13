@@ -26,19 +26,12 @@ def top_ten(subreddit):
                             allow_redirects=False)
 
     # Check if the response status code indicates a not-found error (404)
-    if response.status_code != 200:
+    if response.status_code == 404:
         print("None")
         return
 
     # Parse the JSON response and extract the 'data' section
-    try:
-        results = response.json().get("data")
-    except ValueError:
-        print("None")
-        return
+    results = response.json().get("data")
 
     # Print the titles of the top 10 hottest posts
-    if results:
-        [print(c.get("data").get("title")) for c in results.get("children")]
-    else:
-        print(None)
+    [print(c.get("data").get("title")) for c in results.get("children")]
