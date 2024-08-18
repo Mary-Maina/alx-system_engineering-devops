@@ -1,5 +1,8 @@
 **PostMoterm**
 
+![image](https://github.com/user-attachments/assets/3858c052-665b-44b2-a160-70fb4bbfe4f5)
+
+
 **Issue Summary**
 
 Duration: 1 hour and 30 minutes, from 14:30 to 16:00 UTC on April 5, 2024.Impact: The core API service experienced a complete outage, affecting 95% of user-facing applications. Users reported errors, slow performance, and inability to access critical features.Root Cause: A configuration change to the load balancer resulted in incorrect traffic distribution, overloading a single API instance and causing it to crash.
